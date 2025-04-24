@@ -86,5 +86,57 @@ The pipeline flows from data extraction through transformation, and finally to m
 1. **Clone the repository:**
 
    First, clone this repository to your local machine or server:
-   ```bash
+```
    git clone https://github.com/ibnufajar1994/pyspark-pipeline.git
+```
+
+2. **Set up your environment**:  
+   You'll need to set up your environment variables to connect to your PostgreSQL databases and define other project settings. Edit the .env file in the root directory and /script/.env:
+```
+   LOG_POSTGRES_HOST=your_host  
+   LOG_POSTGRES_DB=your_db  
+   LOG_POSTGRES_USER=your_user  
+   LOG_POSTGRES_PASSWORD=your_password  
+   LOG_POSTGRES_PORT="5433"  
+
+   SRC_POSTGRES_HOST=your_host  
+   SRC_POSTGRES_DB=your_db  
+   SRC_POSTGRES_USER=your_user  
+   SRC_POSTGRES_PASSWORD=your_password  
+   SRC_POSTGRES_PORT="5434"  
+
+   DWH_POSTGRES_HOST=your_host  
+   DWH_POSTGRES_DB=your_db  
+   DWH_POSTGRES_USER=your_user  
+   DWH_POSTGRES_PASSWORD=your_password  
+   DWH_POSTGRES_PORT="5435"  
+
+   PROJECT_DIRECTORY="/your/project/directory"  
+```
+
+### Running the Project
+
+Once you've cloned the repository and set up your environment, you can run the project using Docker:
+
+1. **Build the project:**
+ ```
+   docker compose build --no-cache
+```
+
+2. **Start the services:**
+```
+   docker compose up -d
+```
+
+This will start all the necessary services, and your pipeline will be running, processing data as designed.
+
+---
+
+## Additional Notes:
+- Be sure to install Docker and Docker Compose on your system for running the project in a containerized environment.
+- Make sure your PostgreSQL instances are set up and accessible, as this pipeline relies on them for storing raw and processed data.
+- The project also uses **MinIO** for storing the model after training, so ensure that MinIO is configured correctly.
+
+---
+
+
