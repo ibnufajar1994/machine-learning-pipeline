@@ -94,25 +94,39 @@ The pipeline flows from data extraction through transformation, and finally to m
    **A. Create .env file**  
 You'll need to set up your environment variables to connect to your PostgreSQL databases and define other project settings. Edit the .env file in the root directory and /script/.env:
 ```
-   LOG_POSTGRES_HOST=your_host  
-   LOG_POSTGRES_DB=your_db  
-   LOG_POSTGRES_USER=your_user  
-   LOG_POSTGRES_PASSWORD=your_password  
-   LOG_POSTGRES_PORT="5433"  
-
-   SRC_POSTGRES_HOST=your_host  
-   SRC_POSTGRES_DB=your_db  
-   SRC_POSTGRES_USER=your_user  
-   SRC_POSTGRES_PASSWORD=your_password  
-   SRC_POSTGRES_PORT="5434"  
-
-   DWH_POSTGRES_HOST=your_host  
-   DWH_POSTGRES_DB=your_db  
-   DWH_POSTGRES_USER=your_user  
-   DWH_POSTGRES_PASSWORD=your_password  
-   DWH_POSTGRES_PORT="5435"  
-
-   PROJECT_DIRECTORY="/your/project/directory"  
+   SRC_POSTGRES_DB=
+   SRC_POSTGRES_USER=
+   SRC_POSTGRES_PASSWORD=
+   SRC_POSTGRES_PORT="5433"
+   
+   
+   STG_POSTGRES_DB=
+   STG_POSTGRES_USER=
+   STG_POSTGRES_PASSWORD=
+   STG_POSTGRES_PORT=
+   
+   DWH_POSTGRES_DB=
+   DWH_POSTGRES_USER="
+   DWH_POSTGRES_PASSWORD=
+   DWH_POSTGRES_PORT=
+   
+   LOG_POSTGRES_DB=
+   LOG_POSTGRES_USER=
+   LOG_POSTGRES_PASSWORD=
+   LOG_POSTGRES_PORT=
+   
+   HOST="localhost"
+   
+   MINIO_ACCESS_KEY=
+   MINIO_SECRET_KEY=
+   
+   CRED_PATH="your-working-directory/credentials/your-api-key-from-google-spreadsheet"
+   GS_KEY="your-gss-key"
+   WORKSHEET_NAME=
+   
+   LINK_API="https://raw.githubusercontent.com/Kurikulum-Sekolah-Pacmann/us_states_data/refs/heads/main/us_states.json"
+   
+   FILE_PATH="your-working-directory" 
 ```
    **B. Copy the spreadsheet file & save your API KEY on path: /your-working-directory/credentials**
 
