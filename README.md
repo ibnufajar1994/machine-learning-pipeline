@@ -90,8 +90,9 @@ The pipeline flows from data extraction through transformation, and finally to m
    git clone https://github.com/ibnufajar1994/pyspark-pipeline.git
 ```
 
-2. **Set up your environment**:  
-   You'll need to set up your environment variables to connect to your PostgreSQL databases and define other project settings. Edit the .env file in the root directory and /script/.env:
+2. **Set up your environment**:   
+   **A. Create .env file**  
+You'll need to set up your environment variables to connect to your PostgreSQL databases and define other project settings. Edit the .env file in the root directory and /script/.env:
 ```
    LOG_POSTGRES_HOST=your_host  
    LOG_POSTGRES_DB=your_db  
@@ -113,6 +114,7 @@ The pipeline flows from data extraction through transformation, and finally to m
 
    PROJECT_DIRECTORY="/your/project/directory"  
 ```
+   **B. Copy the spreadsheet file & save your API KEY on path: /your-working-directory/credentials**
 
 ### Running the Project
 
